@@ -45,11 +45,100 @@ class DetailScreen extends StatelessWidget {
           ),
           //Detail Info
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
               children: [
                 //info atas(nama candi dan tombol favorit)
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      candi.name,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.favorite_border))
+                  ],
+                ),
+
                 //info tengah(lokasi,dibangun dan tipe)
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.place,
+                      color: Colors.red,
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    const SizedBox(
+                      width: 70,
+                      child: Text(
+                        "Lokasi",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(": ${candi.location}")
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.calendar_month,
+                      color: Colors.lightBlue,
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    const SizedBox(
+                      width: 70,
+                      child: Text(
+                        "Dibangun",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(": ${candi.built}")
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.house,
+                      color: Colors.green,
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    const SizedBox(
+                      width: 70,
+                      child: Text(
+                        "Tipe",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(": ${candi.type}")
+                  ],
+                ),
+                //Pemisah
+                const SizedBox(
+                  height: 20,
+                ),
+                Divider(
+                  color: Colors.deepPurple.shade100,
+                ),
+                const SizedBox(
+                  height: 20,
+                )
                 //info bawah(desc)
               ],
             ),
