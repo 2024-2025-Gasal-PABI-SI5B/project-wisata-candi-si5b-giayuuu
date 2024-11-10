@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_candi/screens/signin_screen.dart';
-import 'package:wisata_candi/screens/profile_screen.dart';
-import 'package:wisata_candi/screens/detail_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,9 +14,10 @@ class MainApp extends StatelessWidget {
       title: 'Wisata Candi',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: Colors.deepPurple),
+          backgroundColor: Colors.deepPurple,
+          iconTheme: IconThemeData(color: Colors.white),
           titleTextStyle: TextStyle(
-            color: Colors.deepPurple,
+            color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -32,7 +31,7 @@ class MainApp extends StatelessWidget {
       ),
       // home: DetailScreen(candi: candiList[0]),
       // home: ProfileScreen(),
-      home: SignInScreen(),
+      home: const SignInScreen(),
     );
   }
 }
